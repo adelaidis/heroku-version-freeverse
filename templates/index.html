@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Free Verse Generator</title>
+    <link rel="stylesheet" type="text/css" href="./../static/style.css" media="screen" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&family=Zen+Antique+Soft&family=Zen+Kurenaido&family=Zen+Old+Mincho&family=La+Belle+Aurore&&family=Quintessential&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+
+  </head>
+  
+  <body>
+    <div id='flex-wrapper' class='centerScreen' style="flex-direction: column;">
+
+      <section id="container">
+
+        <header tabindex="0"><h1>Free Verse Generator</h1></header>
+
+          <br>
+        <div>
+          <form action="" method="post" style="flex-direction: column;">  
+            <input tabindex="1" id="inputId" class="formElement"  type="text" name="seed" placeholder="Enter the beginning of your poem" required="required" autocomplete="off" /><br>
+            <button tabindex="2" class="formElement" id="btnId" type="submit">Generate!</button>
+          </form>
+        </div>
+
+        <br>
+        <br>
+        <article id="completedPoem">
+            <div tabindex="3" id="poemTitle"><b>{{ seed }}</b></div>
+            <br>
+            <div tabindex="4" id="poemText">{{ prediction_text }}</div>
+        </article>  
+        <br>
+        <br>
+      </section>
+      
+      
+      <footer id="footer">
+        <aside tabindex="5">
+          Made by <a tabindex="6" href="http://giermek.net" target="_blank">Magdalena Giermek</a>
+        </aside>
+        <div tabindex="6" id="disclaimer">
+          Disclaimer
+        </div>
+        <aside tabindex="7">
+          Some poems may use <a tabindex="8" href="https://words.bighugelabs.com" target="_blank">Big Huge Thesaurus</a>
+        </aside>
+      </footer>
+    </div>
+
+   <script>
+    function showLoadingText() {
+      console.log(document.querySelector("input").value)
+      if (document.querySelector("input").value != "") { 
+        document.getElementById("btnId").innerHTML = "Generating...";
+        document.getElementById("btnId").style.cssText = "background-color: transparent; font-weight: normal; color: black; cursor: progress;"
+      }
+    }
+
+    function toggleDisclaimer() {
+      let disclaimer = document.getElementById("disclaimer");
+      const trimmedDisclaimerText = disclaimer.textContent.trim();
+      if (trimmedDisclaimerText == "Disclaimer") {
+        disclaimer.textContent = "While all practicable measures have been taken to ensure that the poems are not offensive, sometimes the generated text may contain words or language considered profane, vulgar, or derogatory by some readers";
+      }
+      else {
+        disclaimer.textContent = "Disclaimer";
+      }
+    }
+
+    document.getElementById("btnId").addEventListener("click", showLoadingText)
+
+    document.getElementById("disclaimer").addEventListener("keypress", (e) => {
+      console.log('click')
+      if (e.key == 'Enter') {
+        toggleDisclaimer()
+      }
+    })
+
+    document.getElementById("disclaimer").addEventListener("click", toggleDisclaimer)
+  </script>
+</body>
+
+</html>

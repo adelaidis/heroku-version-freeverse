@@ -1,0 +1,140 @@
+@media screen and (max-width: 414px) {
+
+    html {
+        width: 100%;
+    }
+
+    body {
+        font-size: 3vw;
+    }
+
+    #completedPoem {
+        width: 90%;
+        font-size: 5vw;
+        margin: 2vw;
+    }
+
+    input[type=text] {
+        margin: 2vw;
+        height: 2em;
+        width: 80vw;
+        font-size: 4vw;
+    }
+
+}
+
+body {
+    font-size: 3vh;
+    background-image: url('paperBackgroundLarge.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#flex-wrapper {
+    display: flex;
+    min-height: 98vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+h1 {
+    font-size: 2em;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    justify-content: center;
+    text-align: center;
+}
+
+.centerScreen {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;
+    min-height: 100vh;*/
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
+#poemTitle {
+    font-family: 'Zen Antique Soft', serif;
+    font-size: 2em;
+}
+#poemText{
+    text-align: left;
+    font-family: 'Zen Old Mincho', serif;
+    white-space: pre-wrap;
+}
+
+.formElement {
+    padding: 1vh;
+    margin: 1vh;
+    font-size: inherit;
+}
+
+input[type=text] {
+    width: 20em;
+    height: 2em;
+    font-family: 'La Belle Aurore', cursive;
+    background-color: #b8c3fa;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(36, 0, 0, 0.719) !important;
+    outline: none;
+    color:rgb(1, 0, 87);
+}
+
+::placeholder {
+    color: rgba(36, 0, 0, 0.719);
+    opacity: 1; /* Firefox */
+    font-family: 'Rubik', sans-serif;
+  }
+
+button {
+    font-family: 'Rubik', sans-serif;
+    background-color: rgba(36, 0, 0, 0.719);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 2vh; 
+    font-weight: 300;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:rgb(1, 0, 87);
+}
+
+#completedPoem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#footer {
+    font-size: 0.8em;
+    font-family: 'Rubik', sans-serif;
+    color: rgba(36, 0, 0, 0.863);
+}
+
+a {
+    color: rgba(36, 0, 0, 0.932);
+    text-decoration: none;
+    cursor: hand;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#disclaimer {
+    cursor: pointer !important;
+}
+
+#disclaimer:hover {
+    text-decoration: underline;
+}
