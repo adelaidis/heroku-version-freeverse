@@ -1,6 +1,10 @@
 Flask==1.0.2
+Flask_WTF==1.0.1
+joblib==1.1.0
 keras
+matplotlib
 numpy
+pandas
 profanity_check==1.0.3
 requests==2.21.0
 tensorflow

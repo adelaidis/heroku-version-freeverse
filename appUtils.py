@@ -1,11 +1,6 @@
-import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import tensorflow.keras as keras
-import json
 import random
 import re
-import joblib
 from profanity_check import predict
 import os
 from config.definitions import ROOT_DIR
@@ -13,9 +8,6 @@ from config.definitions import ROOT_DIR
 
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dropout, LSTM, Dense, Embedding, Bidirectional, SimpleRNN, GRU
-from tensorflow.keras.optimizers import RMSprop
 
 import tensorflow as tf 
 

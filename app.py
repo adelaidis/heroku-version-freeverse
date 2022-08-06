@@ -1,14 +1,10 @@
 import os
 from tensorflow.keras.models import load_model
-import tensorflow as tf
 from flask import Flask, render_template, request, redirect, url_for
-from flask_wtf import FlaskForm
 from wtforms import StringField
-from wtforms.validators import ValidationError, DataRequired
-from wtforms import Form, StringField, validators, SubmitField, DecimalField, IntegerField
+from wtforms import Form, StringField, validators, SubmitField
 import numpy as np
 import tensorflow.keras as keras
-from tensorflow.keras.preprocessing.sequence import pad_sequences
 import sys
 # this is where the model is saved
 sys.path.append("C:/Users/magie/OneDrive/Documents/Studia/TM470/TM470project/prototype1")
