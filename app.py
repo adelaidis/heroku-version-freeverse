@@ -1,13 +1,7 @@
 import os
-from tensorflow.keras.models import load_model
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 from wtforms import StringField
 from wtforms import Form, StringField, validators, SubmitField
-import numpy as np
-import tensorflow.keras as keras
-import sys
-# this is where the model is saved
-sys.path.append("C:/Users/magie/OneDrive/Documents/Studia/TM470/TM470project/prototype1")
 from appUtils import *
 from tensorflow.python.framework import ops
 ops.get_default_graph()
