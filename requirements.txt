@@ -4,7 +4,7 @@ keras
 matplotlib==3.0.2
 numpy
 pandas
-profanity_check==1.0.3
+alt-profanity_check
 requests==2.21.0
 tensorflow-cpu
 WTForms==3.0.0
