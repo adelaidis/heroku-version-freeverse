@@ -5,3 +5,4 @@ profanity_check==1.0.3
 requests==2.21.0
 tensorflow-cpu
 WTForms==3.0.0
+gunicorn
