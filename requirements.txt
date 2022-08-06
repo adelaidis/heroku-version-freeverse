@@ -3,5 +3,5 @@ keras
 numpy
 profanity_check==1.0.3
 requests==2.21.0
-tensorflow
+tensorflow-cpu
 WTForms==3.0.0
