@@ -1,11 +1,11 @@
 Flask==1.0.2
 Flask_WTF==1.0.1
 joblib==1.1.0
-keras==2.6.0
-matplotlib==3.0.2
-numpy==1.16.4
-pandas==0.23.4
+keras
+matplotlib
+numpy
+pandas
 profanity_check==1.0.3
 requests==2.21.0
-tensorflow==2.8.2
+tensorflow
 WTForms==3.0.0
