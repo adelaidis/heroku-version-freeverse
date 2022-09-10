@@ -20,14 +20,15 @@ class Form(Form):
 @app.route("/", methods=['GET', 'POST'])
 def index():
     form = Form(request.form)
+    # load model
+    model = load_keras_model()
+    # tokenize data
+    tokenizer = prepare_tokenization()
     # If submit clicked
     if request.method == "POST" and form.validate():   
         # take seed field from form
         seed = request.form['seed']
-        # load model
-        model = load_keras_model()
-        # tokenize data
-        tokenizer = prepare_tokenization()
+        
         # and render the page again with poem displayed
         return render_template('index.html', form = form, seed = seed, prediction_text = create_poem(model, tokenizer, seed))  
     else:
@@ -37,5 +38,6 @@ def index():
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host="localhost", port=5000, debug=True)
+    
 
     
