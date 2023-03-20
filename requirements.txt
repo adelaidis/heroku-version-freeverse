@@ -1,4 +1,4 @@
-scikit-learn==1.021
+scikit-learn==1.02
 Flask==2.0.2
 joblib
 keras
